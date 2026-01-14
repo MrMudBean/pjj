@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { dog } from './src/dog';
+import { dog } from './dog';
 
-import { main } from './src/main';
+import { main } from './main';
 
 (() => {
   try {

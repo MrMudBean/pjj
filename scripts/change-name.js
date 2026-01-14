@@ -14,7 +14,7 @@ delete packageJson.devDependencies;
 delete packageJson['lint-staged'];
 delete packageJson.private;
 
-// eslint-disable-next-line no-undef
+ 
 const distPath = pathJoin(process.cwd(), './dist/package.json');
 
 writeFileSync(distPath, JSON.stringify(packageJson, null, 2));

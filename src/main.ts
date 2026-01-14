@@ -1,11 +1,11 @@
+import { isNode } from 'a-js-tools';
+import { _p } from 'a-node-tools';
+import { bgBlackPen } from 'color-pen';
+import { blackSpace } from './blackSpace';
 import { colorText } from './colorText';
 import { command, message, script } from './command';
-import { line } from './line';
-import { _p } from 'a-node-tools';
 import { dog } from './dog';
-import { blackSpace } from './blackSpace';
-import { isNode } from 'a-js-tools';
-import { bgBlackPen } from 'color-pen';
+import { line } from './line';
 
 /**
  *  空行

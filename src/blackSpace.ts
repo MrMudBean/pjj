@@ -1,7 +1,7 @@
 import { _p } from 'a-node-tools';
 import { bgBlackPen } from 'color-pen';
-import { dataStore } from './data-store';
 import { noColor } from './command';
+import { dataStore } from './data-store';
 
 /**
  *

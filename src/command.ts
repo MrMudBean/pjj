@@ -1,9 +1,9 @@
-import { Command } from 'a-command';
+import { Args } from 'a-command';
 import { cn } from './cn';
 import { commandBind } from './types';
 
 /**  创建一个命令  */
-const command = new Command<commandBind>('pjj');
+const command = new Args<commandBind>('pjj');
 
 command.bind([
   'message <-m> (添加自定义的命令消息)',

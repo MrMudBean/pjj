@@ -1,7 +1,7 @@
-import { dog } from './dog';
+import { getRandomInt } from 'a-js-tools';
 import { bgBlackPen, truncateStringWithChar } from 'color-pen';
 import { dataStore } from './data-store';
-import { getRandomInt } from 'a-js-tools';
+import { dog } from './dog';
 
 /**
  *
