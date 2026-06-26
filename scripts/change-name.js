@@ -1,5 +1,5 @@
-import { pathJoin, readFileToJsonSync } from 'a-node-tools';
 import { writeFileSync } from 'node:fs';
+import { pathJoin, readFileToJsonSync } from '@vvi/node';
 
 const packageJson = readFileToJsonSync('./dist/package.json');
 
@@ -14,7 +14,6 @@ delete packageJson.devDependencies;
 delete packageJson['lint-staged'];
 delete packageJson.private;
 
- 
 const distPath = pathJoin(process.cwd(), './dist/package.json');
 
 writeFileSync(distPath, JSON.stringify(packageJson, null, 2));

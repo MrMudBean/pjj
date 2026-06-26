@@ -8,7 +8,7 @@
  * @copyright 2026 ©️ MrMudBean
  * @since 2026-01-14 22:56
  * @version 1.0.4
- * @lastModified 2026-01-14 23:05
+ * @lastModified 2026-06-26 14:25
  */
 import typescript from '@rollup/plugin-typescript';
 import resolve from '@rollup/plugin-node-resolve';
@@ -16,8 +16,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import cleanup from 'rollup-plugin-cleanup';
 import copy from 'rollup-plugin-copy';
-import { external } from '@qqi/rollup-external';
-import license from 'rollup-plugin-license';
+import { external } from '@vvi/rollup-external';
+// import license from 'rollup-plugin-license';
 import terser from '@rollup/plugin-terser';
 
 export default {
@@ -35,17 +35,6 @@ export default {
   })),
   // 配置需要排除的包
   external: external({
-    include: [
-      '@qqi/log',
-      'a-js-tools',
-      'a-node-tools',
-      'color-pen',
-      'a-command',
-      'a-type-of-js',
-      '@color-pen/static',
-      'a-type-of-js/isFunction',
-      'a-type-of-js/isNumber',
-    ],
     ignore: ['node:'],
   }),
   plugins: [
@@ -63,26 +52,25 @@ export default {
     cleanup(),
     copy({
       targets: [
-        { src: 'README.md', dest: 'dist' },
-        { src: 'LICENSE', dest: 'dist' },
+        { src: ['README.md', 'LICENSE', 'CHANGELOG.md'], dest: 'dist' },
       ],
     }),
-    license({
-      thirdParty: {
-        allow: '(MIT OR Apache-2.0 OR BSD-3-Clause)', // 仅允许这些许可证依赖
-        output: {
-          file: 'dist/THIRD-PARTY-LICENSES.txt',
-          template: dependencies =>
-            `THIRD-PARTY LICENSE\n${'='.repeat(50)}\n\n`.concat(
-              dependencies
-                ?.map(
-                  dep =>
-                    `${dep.name} (${dep.version})\n${'-'.repeat(30)}\n${dep.licenseText}\n`,
-                )
-                .join('\n'),
-            ),
-        },
-      },
-    }),
+    // license({
+    //   thirdParty: {
+    //     allow: '(MIT OR Apache-2.0 OR BSD-3-Clause)', // 仅允许这些许可证依赖
+    //     output: {
+    //       file: 'dist/THIRD-PARTY-LICENSES.txt',
+    //       template: dependencies =>
+    //         `THIRD-PARTY LICENSE\n${'='.repeat(50)}\n\n`.concat(
+    //           dependencies
+    //             ?.map(
+    //               dep =>
+    //                 `${dep.name} (${dep.version})\n${'-'.repeat(30)}\n${dep.licenseText}\n`,
+    //             )
+    //             .join('\n'),
+    //         ),
+    //     },
+    //   },
+    // }),
   ],
 };

@@ -64,6 +64,8 @@ npm install --save-dev pjj
 }
 ```
 
-## 文档地址
+## 状态
 
-参看 [pjj/](https://earthnut.dev/npm/pjj/)
+此软件包是 `MrMudBean` 生态系统的一部分。
+它使用严格的 TypeScript 编写，并通过 Rollup 构建进行验证。
+虽然单元测试较少，但 API 稳定，并在生产环境中大量使用。

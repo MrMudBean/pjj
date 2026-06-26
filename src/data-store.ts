@@ -1,4 +1,4 @@
-import { strInTerminalLength } from 'color-pen';
+import { strInTerminalLength } from '@vvi/pen';
 import { message } from './command';
 
 const screenWith = process.stdout.columns;

@@ -1,4 +1,4 @@
-import { Args } from 'a-command';
+import { Args } from '@vvi/command';
 import { cn } from './cn';
 import { commandBind } from './types';
 

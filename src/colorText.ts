@@ -1,15 +1,11 @@
-import { getRandomInt } from 'a-js-tools';
-import { bgBlackPen, truncateStringWithChar } from 'color-pen';
+import { bgBlackPen, truncateStringWithChar } from '@vvi/pen';
+import { getRandomInt } from '@vvi/utils';
 import { dataStore } from './data-store';
 import { dog } from './dog';
 
 /**
- *
- * @description 生成随机颜色文本
- *
+ * # 生成随机颜色文本
  * @param str 字符串
- *
- *
  */
 export function colorText(str: string) {
   const { screenWith, safeWidth } = dataStore;

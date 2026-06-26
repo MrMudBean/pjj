@@ -1,11 +1,9 @@
-import { randomPen } from 'color-pen';
+import { randomPen } from '@vvi/pen';
 import { noColor } from './command';
 import { dataStore } from './data-store';
 
 /**
- *
- * @description 生成分割线
- *
+ * # 生成分割线
  */
 export function line() {
   let str = '';

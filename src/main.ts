@@ -1,6 +1,6 @@
-import { isNode } from 'a-js-tools';
-import { _p } from 'a-node-tools';
-import { bgBlackPen } from 'color-pen';
+import { _p } from '@vvi/node';
+import { bgBlackPen } from '@vvi/pen';
+import { isNode } from '@vvi/utils';
 import { blackSpace } from './blackSpace';
 import { colorText } from './colorText';
 import { command, message, script } from './command';
@@ -8,7 +8,7 @@ import { dog } from './dog';
 import { line } from './line';
 
 /**
- *  空行
+ *  # 空行
  */
 const space = '\n'.repeat(3);
 /**
